@@ -1,0 +1,15 @@
+					Exception Faced In Selenium
+InvalidArgumentException: invalid argument - When we dont pass protocol - http or https
+NoSuchSessionException - session id null
+NoSuchSessionException: invalid session id
+IllegalArgumentException: Keys to send should be a not null CharSequence 
+NoSuchElementException - if element not found
+UnexpectedTagNameException: Element should have been "select" but was "input"
+InvalidSelectorException: invalid selector:
+UnhandledAlertException : when JS alert is present but unhandled
+NoAlertPresentException: When we try to switch to alert and alert not present or it is coming after sometime
+NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()? when you can quit instead of close
+NoSuchFrameException: No frame element found by name or id mukesh
+ElementNotInteractableException: element not interactable- Example - Element is disabled and selenium is trying to perform some operation, example - element will be visible only after scrolling
+TimeoutException - When waits time is over pageLoad,scriptTimeOut
+TimeoutException -  When waits time is over for WebDriverWait as well

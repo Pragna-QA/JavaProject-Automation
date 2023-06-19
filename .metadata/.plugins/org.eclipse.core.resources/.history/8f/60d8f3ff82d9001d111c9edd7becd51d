@@ -1,0 +1,13 @@
+package finalKeyword;
+
+public class Class2 extends Class1{
+
+	public static void main(String[] args) {
+		
+		Class2 obj1 = new Class2();
+		obj1.m1();
+		
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package finalKeyword;
+
+public class Sample2 {
+
+	public static void main(String[] args) {
+		
+		PrivateVariableDemo a = new PrivateVariableDemo("Rajesh","rajesh@gmail.com" , 33);
+		PrivateVariableDemo b = new PrivateVariableDemo("Pragna","pragna@gmail.com" , 30);
+		PrivateVariableDemo c = new PrivateVariableDemo("Sai","sai@gmail.com" , 31);
+
+		System.out.println(a.name);
+		System.out.println(b.name);
+		System.out.println(c.name);
+	}
+
+}

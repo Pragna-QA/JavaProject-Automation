@@ -1,0 +1,62 @@
+**************************************************Implicit wait in Selenium***************************************************************************
+An implicit wait is a condition-less wait command in Selenium. Since it is condition-less, it is applied to all the web elements on the web page.
+This means that we can tell Selenium that we would like it to wait for a certain amount of time before throwing an exception that it cannot find the element on the page or the page is not loaded or the javascript execution is not finished. Also, important to note that once set,  Implicit Wait stays in place for the entire duration for which the browser is open.
+
+We can apply implicit wait through three functions:
+implicitlyWait()
+pageLoadTimeout()
+setScriptTimeout()
+
+Even though they are three separate callable functions, all of them are part of timeout in Selenium.
+implicitlyWait command in Selenium timeout
+
+During implicitlyWait, the WebDriver will poll the DOM for certain specified time units while trying to find any element. If the element is found earlier, the test executes at that point otherwise the WebDriver waits for the specified duration.
+The polling time (or polling interval) is the time interval in which Selenium starts searching again after the last failed try. It depends on the type of browser driver you are working on. Some may have 500 milliseconds while some may have 1 second as polling time. The polling time is inbuild in implicitlyWait and there is no way to modify the time interval. But in Fluent wait, you can specify and overwrite the polling interval.
+
+To add implicit waits in test scripts, import the following package.
+import java.util.concurrent.TimeUnit;
+Syntax: driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+The implicitlyWait command waits for an element to load for a specified duration.
+WebDriver driver = new FirefoxDriver();
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+driver.get("https://somedomain/url_that_delays_loading");
+WebElement myDynamicElement = driver.findElement(By.id("myDynamicElement"))
+
+Here, the tester has specified to wait for 10 seconds (through Duration.ofSeconds(10)) before moving ahead with the interaction with the element. However, the tester can also apply other units of time such as shown by this autofill option in IntelliJ:
+
+The default value of implicit wait is 0.
+
+Please follow the rest of the code with our Selenium beginner series that explains the functions in detail.
+
+
+***********************************************************pageLoadTimeout***************************************************************************
+
+pageLoadTimeout command in Selenium timeout:
+As the name suggests, pageLoadTimeout command waits for the page to load completely for a specified number of seconds. The default value is 0 and a negative value means infinite wait.
+
+WebDriver driver = new FirefoxDriver();
+driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+driver.get("https://www.google.com/");
+Here, the tester has specified to wait for 30 seconds before moving ahead to interact with the element. Therefore, WebDriver will wait for a maximum of 30 seconds. The pageLoadTimeout is a good option when you are looking to test the page load performance to be within limits. 
+
+
+**********************************************************setScriptTimeout******************************************************************************
+
+setScriptTimeout command in Selenium timeout:
+The setScriptTimeout command waits for the asynchronous parts of the web page to finish loading for a specified number of seconds.
+
+driver.manage().timeouts().setScriptTimeout(15, TimeUnit.SECONDS);
+((JavascriptExecutor) driver).executeScript("alert('hello world');");
+((JavascriptExecutor) driver).executeAsyncScript("window.setTimeout(arguments[arguments.length - 1], 500);
+
+Here, the tester has specified to wait for 15 seconds before moving ahead with the interaction with the element.
+
+
+**************************************************************polling******************************************************************************************
+
+
+What is polling in implicit wait?
+The implicit wait is done until the element is found or the maximum time has elapsed. But for fallbacks, implicit wait in Selenium comes with a feature called polling. With polling, implicit wait keeps searching for the element at regular intervals till the time it finds the element or the maximum time has elapsed.
+
+

@@ -1,0 +1,18 @@
+package java_Assignments;
+
+public class Assignment2 {
+
+	public static void main(String[] args) {
+		String fruits[] = new String[4];
+		fruits[0] = "Apple";
+		fruits[1] = "Banana";
+		fruits[2] = "Orange";
+		fruits[3] = "Grapes";
+			
+		System.out.println("List of fruits :" +fruits);
+		
+		
+
+	}
+
+}

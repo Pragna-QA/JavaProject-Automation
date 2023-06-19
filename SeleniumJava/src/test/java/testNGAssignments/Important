@@ -1,0 +1,7 @@
+//input[@value='Female']
+
+
+String xpath="//input[@value='"+value+"']";
+
+
+"//label[normalize-space()='"+hobbies+"']"

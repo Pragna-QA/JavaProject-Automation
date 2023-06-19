@@ -1,0 +1,41 @@
+package day10_polymorphism;
+
+public class CompileTimePoly {
+
+	public static void main(String[] args) {
+		
+		CompileTimePoly obj1 = new CompileTimePoly();
+				obj1.add();
+				obj1.add(12, 22);
+				obj1.add(12.5, 32.3);
+		
+
+	}
+	
+	public void add()
+	{
+		System.out.println("Iam in add method with 0 Arguments");
+	}
+	public void add(int a, int b)
+	{
+		System.out.println("Iam in add method with 2 int Arguments");
+		int c= a+b;
+		System.out.println("Sum of value is : "+c);
+	}
+	public void add(double a, double b)
+	{
+		System.out.println("Iam in add method with  double Arguments");
+		double c = a+b;
+		System.out.println("Sum of the double value is : "+c);
+		
+	}
+	
+	public void add(int a, double b)
+	{
+		System.out.println("Iam in add method with  double Arguments");
+		double c = a+b;
+		System.out.println("Sum of the double value is : "+c);
+		
+	}
+
+}

@@ -1,0 +1,10 @@
+package finalKeyword;
+
+public class ClassDemo1 {
+	
+	public void m1()
+	{
+		System.out.println("Iam in Class1, m1 Method");
+	}
+
+}

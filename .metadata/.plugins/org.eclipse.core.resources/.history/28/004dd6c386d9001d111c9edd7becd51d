@@ -1,0 +1,16 @@
+package finalKeyword;
+
+public class Class2 extends Class1{
+
+	public static void main(String[] args) {
+		
+		Class2 obj1 = new Class2();
+		obj1.m1();
+	}
+	
+	public void m1()
+	{
+		System.out.println("Iam in Class2, m1 Method");
+	}
+
+}

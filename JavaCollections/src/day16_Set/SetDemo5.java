@@ -1,0 +1,29 @@
+package day16_Set;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class SetDemo5 {
+
+	public static void main(String[] args) {
+		
+		Set<String> hs2 = new HashSet<>();
+		
+		hs2.add("Sai Pragna");
+		hs2.add("Rajesh");
+		hs2.add("Pragna");
+		hs2.add("Nani");
+		hs2.add("Munny");
+		hs2.add(null);
+		
+		//Convert Set to List
+		
+		List<String> l1 = new ArrayList<>(hs2);
+		System.out.println(l1);
+		System.out.println(l1.get(0));
+		
+	}
+
+}

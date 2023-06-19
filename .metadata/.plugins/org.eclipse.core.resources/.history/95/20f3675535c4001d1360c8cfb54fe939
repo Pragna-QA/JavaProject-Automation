@@ -1,0 +1,16 @@
+package day7;
+
+public class StringSplit {
+
+	public static void main(String[] args) {
+		
+	String msg= "Welcome to Java Programming" ;
+	
+	String array[] = msg.split("JAVA");
+	
+	System.out.println(msg);
+		
+
+	}
+
+}

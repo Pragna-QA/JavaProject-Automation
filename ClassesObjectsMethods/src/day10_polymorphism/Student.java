@@ -1,0 +1,40 @@
+package day10_polymorphism;
+
+public class Student {
+	
+	int id;
+	String name;
+	String email;
+	
+	
+	
+	public Student()
+	{
+		System.out.println("New Student Joined");
+	}
+	
+	public  Student(int Student_id)
+	{
+		System.out.println("New Student Joined with ID: "+Student_id);
+	}
+	
+	public  Student(int Student_id, String name, String email)
+	{
+		System.out.println("New Student Joined with ID: "+Student_id + " Name is : "+name   + " Email ID is: "+email);
+		//System.out.println("New Student Name is : "+name);
+		//System.out.println("New Student Email is : "+email);
+	}
+	
+
+	public static void main(String[] args) {
+		
+		Student pragna = new Student();
+		Student Rajesh = new Student(22);
+		Student SaiPragna = new Student(12, "SaiPragna", "pragna@test.com");
+		
+		
+
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package day10_polymorphism;
+
+public class Student {
+	
+	
+	public Student()
+	{
+		System.out.println("New Student Joined");
+	}
+
+	public static void main(String[] args) {
+
+
+	}
+
+}

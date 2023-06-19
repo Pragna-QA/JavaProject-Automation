@@ -1,0 +1,14 @@
+package day7;
+
+public class ObjectArray3 {
+
+	public static void main(String[] args) {
+		
+		Object arr[][] =  {{"Selenium","26.5"},{"Python",76,"Oracle",22.9}};
+		System.out.println(arr[1][3]);
+		
+		
+
+	}
+
+}

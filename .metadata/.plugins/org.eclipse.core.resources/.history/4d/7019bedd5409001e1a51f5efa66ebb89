@@ -1,0 +1,50 @@
+package com.learnautomation.listener;
+
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
+
+
+
+public class ExtentTestNGITestListener  implements ITestListener
+{
+	
+	ExtentReports extent=ExtentManager.getInstance();
+	ExtentTest extentTest;
+	
+	public void onTestStart(ITestResult result) 
+	{
+		extentTest=extent.createTest(result.getMethod().getMethodName());
+		System.out.println("LOG:INFO - Test Started !!!"+result.getMethod().getMethodName());
+	}
+	
+	public void onTestFinish(ITestContext context)
+	{
+		extent.flush();
+		System.out.println("LOG:END - TEST END !!!"+context.getName());
+	}
+	
+	public void onTestSuccess(ITestResult result)
+	{
+		extentTest.pass("Test Passed");
+		System.out.println("LOG:PASS - Test Passed !!!"+result.getMethod().getMethodName());
+	}
+	
+	public void onTestFailure(ITestResult result) 
+	{
+		System.out.println("LOG:FAIL - Test Failed"+result.getThrowable().getMessage());
+	}
+	
+	
+	public void onTestSkipped(ITestResult result) 
+	{
+		System.out.println("LOG:SKIPPED - Test Skipped !!!"+result.getMethod().getMethodName());
+	}
+}
+
+//Suppose if the Interface has 10 methods then we have to implement all 10 methods of that interface.
+//But in Java 8, we no need to implement all interfaces.we can use 'default' and Body Method we can keep as 'blank'

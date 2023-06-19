@@ -1,0 +1,17 @@
+package finalKeyword;
+
+public class PrivateVariableDemo2 {
+	
+	public String name;
+	public String email;
+	public int age;
+	
+	public PrivateVariableDemo2(String name, String email, int age) 
+	
+	{
+		this.name=name;
+		this.email=email;
+		this.age=age;
+	}
+
+}

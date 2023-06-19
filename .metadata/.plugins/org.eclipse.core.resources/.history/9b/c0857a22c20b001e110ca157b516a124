@@ -1,0 +1,21 @@
+package com.learnautomation.testcases;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.learnautomation.contsants.Constants;
+import com.learnautomation.dataProvider.CustomDataProvider;
+//import com.learnautomation.factory.BrowserFactory;
+import com.learnautomation.helper.BaseClass;
+import com.learnautomation.pages.LoginPage;
+
+
+public class SmokeTest  extends BaseClass
+{
+	
+	public void loginToApp()
+	{
+		
+	}
+	
+}

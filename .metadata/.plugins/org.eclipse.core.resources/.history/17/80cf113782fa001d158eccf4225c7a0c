@@ -1,0 +1,37 @@
+package seleniumGrid;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.HashMap;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+public class SeleniumGridOnBrowserStackDevice {
+
+	public static void main(String[] args) throws MalformedURLException 
+	{
+		
+		String hubURL = "https://saipragnabheema_zsXjwD:LGR3fJwVspozECpM9FP2@hub.browserstack.com/wd/hub";
+		
+		HashMap<String, String> browserstackOptions = new HashMap<String, String>();
+		DesiredCapabilities cap = new DesiredCapabilities();
+		browserstackOptions.put("os", "Windows");
+		browserstackOptions.put("osVersion", "11");
+		//browserstackOptions.put("local", "false");
+		browserstackOptions.put("deviceOrientation", "landscape");
+		browserstackOptions.put("deviceName", "iPhone 14");
+		browserstackOptions.put("debug", "true"); // to enable visual logs
+		browserstackOptions.put("consoleLogs", "info"); // to enable network logs to be logged
+		browserstackOptions.put("networkLogs", "true"); // to enable console logs at the info level. You can also use other log levels here.
+		cap.setCapability("bstack:options", browserstackOptions);
+		
+		
+		WebDriver driver = new RemoteWebDriver(new URL(hubURL),cap);
+		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		System.out.println("Title is :"+driver.getTitle());
+		driver.quit();
+
+	}
+
+}

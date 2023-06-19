@@ -1,0 +1,11 @@
+package com.learnautomation.listener;
+
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
+public class ExtentManager {
+
+	public static void createInstance()
+	{
+		ExtentSparkReporter sparkReporter = new ExtentSparkReporter("user.dir\")+\"/Reports/Automation_\"+ Utility.getCurrentDateNew()+\".html");
+	}
+}

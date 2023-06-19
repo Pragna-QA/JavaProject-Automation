@@ -1,0 +1,17 @@
+package finalKeyword;
+
+public class Trainer2 {
+	
+	public Trainer2()
+	{
+		System.out.println("Selenium Online Training Classes");
+	}
+
+	public static void main(String[] args) {
+		
+		Trainer2 Pragna = new Trainer2();
+		
+
+	}
+
+}

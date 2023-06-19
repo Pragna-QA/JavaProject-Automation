@@ -1,0 +1,15 @@
+package finalKeyword;
+
+public class Class1 {
+	
+	public final void m1()
+	{
+		System.out.println("Iam in Class1, m1 Method");
+	}
+
+}
+
+
+//final Methods we cannot override.
+//final Variables we can't change the value
+//We can't extend any final class

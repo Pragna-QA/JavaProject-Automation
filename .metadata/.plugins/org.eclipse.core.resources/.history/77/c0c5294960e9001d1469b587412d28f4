@@ -1,0 +1,16 @@
+package captureScreenshot;
+
+import org.slf4j.helpers.Util;
+
+import helper.Utility;
+
+public class CaptureScreenshots1 {
+
+	public static void main(String[] args) {
+		
+		
+		Utility.startBrowser(null, null)
+
+	}
+
+}

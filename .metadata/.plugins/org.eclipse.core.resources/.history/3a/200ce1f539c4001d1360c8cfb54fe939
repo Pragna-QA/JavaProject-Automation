@@ -1,0 +1,16 @@
+package day7;
+
+public class StringSplit3 {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Amount is 2000 USD".length());
+		System.out.println("Amount is 2000 USD".split(" ")[1]);
+		
+		
+	
+		
+
+	}
+
+}

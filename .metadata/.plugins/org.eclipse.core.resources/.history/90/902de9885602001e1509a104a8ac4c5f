@@ -1,0 +1,24 @@
+package testCases;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import net.thucydides.core.annotations.Managed;
+import net.serenitybdd.junit5.SerenityJUnit5Extension;
+
+
+
+@RunWith(SerenityRunner)
+public class MyFirstTestCase 
+{
+	@Managed
+	WebDriver driver;
+	@Test
+	public void GoogleSearch()
+	{
+		driver.get("https://www.google.com/");
+		driver.findElement(By.name("q")).sendKeys("Selenium with Serenity");
+	}
+
+}

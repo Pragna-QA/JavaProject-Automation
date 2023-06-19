@@ -1,0 +1,18 @@
+package seleniumGrid;
+
+
+public class SeleniumGridOnBrowserStack 
+{
+
+	/*
+	 * HUB URL - 
+	 * DesiredCapabilities -
+	 * 
+	 */
+	
+	
+	public static void main(String[] args)
+	{
+		
+	}
+}

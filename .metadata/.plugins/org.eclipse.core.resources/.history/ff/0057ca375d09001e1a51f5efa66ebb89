@@ -1,0 +1,20 @@
+package com.learnautomation.pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class HomePage 
+{
+	protected  WebDriver driver;
+
+	public  HomePage(WebDriver driver)
+	{
+		this.driver=driver;
+	}
+	
+	private By username=By.id("email1");
+
+	private By password=By.id("password1");
+	
+	private By loginButton=By.className("submit-btn");
+}

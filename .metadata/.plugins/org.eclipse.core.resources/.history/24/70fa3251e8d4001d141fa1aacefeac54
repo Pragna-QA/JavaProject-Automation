@@ -1,0 +1,23 @@
+package day16_Set;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class SetDemo4 {
+
+	public static void main(String[] args) {
+		
+		List<String> l1=Arrays.asList("Engineer","Developer","Lead","Manager","Analyst","Developer");
+		System.out.println("The Values in the List are : " +l1);
+		
+		//COvert List to Set
+		Set<String> hs1 = new HashSet<>();
+		hs1.addAll(l1);
+		System.out.println("The Values in the S are : " +hs1);
+		
+
+	}
+
+}

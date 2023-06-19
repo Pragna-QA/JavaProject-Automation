@@ -1,0 +1,7 @@
+Exception Faced in Selenium
+InvalidArgumentException: Invalid Argument -  When we don't pass protocol(http or https)
+NoSuchSessionException : Session ID is NULL
+NoSuchSessionException : Invalid Session ID
+IllegalArgumentException: Keys to send should be a not null charsequence
+NoSuchElementException : If Element not found
+NoSuchElementException

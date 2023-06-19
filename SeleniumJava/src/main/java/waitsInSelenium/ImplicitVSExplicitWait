@@ -1,0 +1,7 @@
+When to use implicit wait and when to use explicit wait?
+The implicit wait is applied once for all the elements and the next wait cycle starts once the previous one completes. If such a situation matches your requirement, implicit wait commands are best in such cases. For example, if you want to perform a task only after the complete page loads, you can go ahead with pageLoadTimeout. But this wait should be applied anyways.
+
+The explicit wait is conditional in nature. If you want to wait for only a few select elements based on conditions, the explicit wait is the way to go. However, implicit waits used without a solid understanding of scripts can lead to an unnecessarily long time for the completion of scripts.
+
+
+

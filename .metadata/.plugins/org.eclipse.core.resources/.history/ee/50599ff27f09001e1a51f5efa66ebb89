@@ -1,0 +1,8 @@
+package com.learnautomation.dataProvider;
+
+public class Snippet {
+	public static void main(String[] args) {
+		Credentials
+	}
+}
+

@@ -1,0 +1,19 @@
+package seleniumGrid;
+
+import org.testng.annotations.Test;
+
+public class SeleniumGridOnBrowserStack 
+{
+
+	/*
+	 * HUB URL - 
+	 * DesiredCapabilities -
+	 * 
+	 */
+	
+	
+	public static void main(String[] args)
+	{
+		
+	}
+}

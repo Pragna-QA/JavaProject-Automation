@@ -1,0 +1,22 @@
+package day7_Arrays1;
+
+public class ObjectArray2 {
+
+	public static void main(String[] args) {
+		
+		Object array[] = new Object[6];
+		
+		array[0] = 22;
+		array[1] = 22.5;
+		array[2] = "Selenium";
+		array[3] = true;
+		array[4] = "Pragna";
+		array[5] = "C";
+		
+		
+		System.out.println(array[4]);
+		
+
+	}
+
+}

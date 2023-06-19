@@ -1,0 +1,28 @@
+package com.learnautomation.pages;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import com.learnautomation.helper.Utility;
+
+public class CartPage 
+{
+	
+	protected WebDriver driver;
+	
+	public CartPage(WebDriver driver)
+	{
+		this.driver = driver;
+	}
+	
+	private By cart = By.className("cartBtn");
+		
+	
+
+	public By clickOnCart(String bag)
+	{
+		Utility.waitForElement(driver, cart).click();
+		return cart;
+	}
+}

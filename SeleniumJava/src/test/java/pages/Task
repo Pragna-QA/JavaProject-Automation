@@ -1,0 +1,24 @@
+@FindBys : When the required WebElement objects need to match all of the given criteria use @FindBys annotation
+
+
+@FindBys( {
+   @FindBy(className = "class1")
+   @FindBy(className = "class2")
+} )
+private List<WebElement> elementsWithBoth_class1ANDclass2;
+Here List elementsWithBothclass1ANDclass2 will contain any WebElement which satisfies both criteria.
+
+
+
+
+
+@FindAll : When required WebElement objects need to match at least one of the given criteria use @FindAll annotation
+
+Usage:
+@FindAll({
+   @FindBy(className = "class1")
+   @FindBy(className = "class2")
+})
+private List<WebElement> elementsWithEither_class1ORclass2  
+Here List elementsWithEither_class1ORclass2 will contain all those WebElement that satisfies any one of the criteria.
+

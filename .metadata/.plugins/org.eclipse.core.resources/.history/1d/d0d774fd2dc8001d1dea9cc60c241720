@@ -1,0 +1,18 @@
+package day10_polymorphism;
+
+public class CompileTimePoly {
+
+	public static void main(String[] args) {
+		
+		CompileTimePoly obj1 = new CompileTimePoly()
+				obj1.add();
+		
+
+	}
+	
+	public void add()
+	{
+		System.out.println("Iam in add method with 0 Arguments");
+	}
+
+}

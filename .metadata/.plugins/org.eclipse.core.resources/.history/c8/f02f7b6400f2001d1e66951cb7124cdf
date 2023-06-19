@@ -1,0 +1,12 @@
+										Exception Faced in Selenium
+InvalidArgumentException: Invalid Argument -  When we don't pass protocol(http or https)
+NoSuchSessionException : Session ID is NULL
+NoSuchSessionException : Invalid Session ID
+IllegalArgumentException: Keys to send should be a not null charsequence
+NoSuchElementException : If Element not found
+UnExpectedTagnameException : Element should have been "Select" but was "Input".
+InvalidSelectorException : Invalid Selector - An invalid or illegal selector was specified ...implies that the selector which you have used isn't a valid.
+UnhandledAlertException : When JS Alert is present but unhandled.
+NoAlertPresentException : When we try to switch to alert and alert is not present or it is coming after sometime.
+NoSuchFrameException : No Frame element found by name or id
+NoSuchSessionException : Session ID is null. Using Webdriver after callimg quit()? when you can quit instead of close.

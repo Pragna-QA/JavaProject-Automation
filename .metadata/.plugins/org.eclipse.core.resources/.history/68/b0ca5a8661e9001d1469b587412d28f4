@@ -1,0 +1,28 @@
+package captureScreenshot;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.slf4j.helpers.Util;
+
+import helper.Utility;
+
+public class CaptureScreenshots1 {
+
+	public static void main(String[] args) {
+		
+		
+		WebDriver driver =Utility.startBrowser("Chrome", "https://freelance-learn-automation.vercel.app/login");
+		
+//		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		
+		//Store in temp location
+		File src = ts.getScreenshotAs(OutputType.FILE);
+		
+		File dest = new File("./screenshot/screenshot1.png");
+		
+
+	}
+
+}

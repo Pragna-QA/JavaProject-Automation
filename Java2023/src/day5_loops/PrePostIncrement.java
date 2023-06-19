@@ -1,0 +1,16 @@
+package day5_loops;
+
+public class PrePostIncrement {
+
+	public static void main(String[] args) {
+
+		
+		int i =20;
+		int j=i++; //POST INCREMENT (Assign and then Increment)
+		//int j=++i; //PRE INCREMENT (Increment and then Assign)
+		System.out.println(j);
+		}
+
+	
+
+}

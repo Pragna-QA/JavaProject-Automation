@@ -1,0 +1,9 @@
+package com.learnautomation.listener;
+
+public class ExtentManager {
+
+	public static void createInstance()
+	{
+		
+	}
+}

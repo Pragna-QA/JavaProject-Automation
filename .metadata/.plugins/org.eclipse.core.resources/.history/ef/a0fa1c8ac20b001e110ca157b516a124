@@ -1,0 +1,22 @@
+package com.learnautomation.testcases;
+
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+//import com.learnautomation.factory.BrowserFactory;
+import com.learnautomation.helper.BaseClass;
+import com.learnautomation.pages.LoginPage;
+
+
+public class SmokeTest  extends BaseClass
+{
+	
+	
+	@Test
+	public void loginToApp()
+	{
+		Assert.assertTrue(driver.getCurrentUrl().contains("login"), "URL does not contain login");
+	}
+	
+}

@@ -1,0 +1,24 @@
+package com.learnautomation.testcases;
+
+import org.testng.annotations.Test;
+import com.learnautomation.dataProvider.CustomDataProvider;
+import com.learnautomation.helper.BaseClass;
+import com.learnautomation.pages.RegistrationPage;
+
+public class RegistrationTest  extends BaseClass
+{
+	@Test
+	public void newUserlink() 
+	{
+		RegistrationPage page = new RegistrationPage(driver);
+		
+		page.clickOnNewUserLink();
+		
+	}
+	
+	
+	public void signUp()
+	{
+		
+	}
+}

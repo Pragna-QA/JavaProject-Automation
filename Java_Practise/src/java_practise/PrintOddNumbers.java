@@ -1,0 +1,29 @@
+package java_practise;
+
+import java.util.Scanner;
+
+public class PrintOddNumbers {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Please Enter the Odd Numbers till:");
+		
+		int x =sc.nextInt();
+		int sum=0, count=0;
+		
+		for(int i=0;i<=x;i++)
+			if((i%2)==1)
+		{
+			System.out.println(i);
+			sum = sum+i;
+			count++;
+		}
+		
+		double avg=sum/count;
+		System.out.println("The Average of the Odd number is: "+avg);
+
+	}
+
+}

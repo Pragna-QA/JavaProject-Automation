@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test1">
+	  
+	<parameter name="fname" value="Selenium"></parameter>
+	<parameter name="lname" value="Python"></parameter>
+	
+    <classes>
+      <class name="class45_cross_parallelExecution.CBT"/>
+    </classes>
+    
+  </test> 
+  
+  
+  <test name="Test2">
+	  
+	<parameter name="fname" value="Sai"></parameter>
+	<parameter name="lname" value="Pragna"></parameter>
+	
+    <classes>
+      <class name="class45_cross_parallelExecution.CBT"/>
+    </classes>
+    
+  </test> 
+  
+  
+  <test name="Test3">
+	  
+	<parameter name="fname" value="Pragna"></parameter>
+	<parameter name="lname" value="Rajesh"></parameter>
+	
+    <classes>
+      <class name="class45_cross_parallelExecution.CBT"/>
+    </classes>
+    
+  </test> 
+</suite> 

@@ -1,0 +1,32 @@
+package com.learnautomation.dataProvider;
+
+import org.testng.annotations.DataProvider;
+
+public class CustomDataProvider 
+{
+
+	//Use the Data provider in order to access the login credentials
+	@DataProvider(name = "users")
+	public static Object[][] getLoginData()
+	{
+		Object arr[][] = ExcelReader.getDataFromSheet("Credentials");
+		return arr;
+		
+	}
+	
+	@DataProvider(name = "new")
+	public static Object[][] getSignUpData()
+	{
+		Object arr[][] = ExcelReader.getDataFromSheet("UserSignUp");
+		return arr;	
+	}
+	
+	
+	@DataProvider(name = "usertask")
+	public static Object[][] getActivities()
+	{
+		Object arr[][] = ExcelReader.getDataFromSheet("Activities");
+		return arr;	
+	}
+	
+}

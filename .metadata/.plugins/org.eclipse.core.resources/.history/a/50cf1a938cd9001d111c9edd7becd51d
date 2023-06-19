@@ -1,0 +1,19 @@
+package finalKeyword;
+
+public class Difference {
+
+	public static void main(String[] args) {
+		
+		String name = "Selenium";
+		
+		name.concat("WebDriver"); //Strings are Immutable
+		
+		System.out.println(name);
+		
+		String newName = name.concat("WebDriver");
+		
+		System.out.println(newName);
+
+	}
+
+}

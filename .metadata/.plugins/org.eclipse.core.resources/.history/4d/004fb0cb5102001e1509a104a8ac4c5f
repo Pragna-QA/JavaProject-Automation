@@ -1,0 +1,16 @@
+package testCases;
+
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
+
+public class MyFirstTestCase 
+{
+	
+	WebDriver driver;
+	@Test
+	public void GoogleSearch()
+	{
+		
+	}
+
+}

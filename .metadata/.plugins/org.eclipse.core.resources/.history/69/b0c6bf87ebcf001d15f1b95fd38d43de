@@ -1,0 +1,26 @@
+package java_Assignments;
+
+public class Assignment2 {
+
+	public static void main(String[] args) 
+	{
+		
+		String Courses[]= new String[4];
+		
+		Courses[0] = "Selenium";
+		Courses[1]= "Python";
+		Courses[2]= "Java" ;
+		Courses[3]= "API";
+		
+		for(int i=0;i<Courses.length;i++)
+		{
+			String Technologies = Courses[i];
+			System.out.println(Technologies);
+		}
+		
+		
+		
+
+	}
+
+}

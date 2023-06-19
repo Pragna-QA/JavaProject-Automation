@@ -1,0 +1,51 @@
+**********************************************************Explicit wait in Selenium*****************************************************
+An explicit wait is a conditional wait strategy in Selenium in other words you wait until the condition you specified becomes true or the time duration has elapsed. Since explicit wait works with a condition, they help in synchronizing the browser, document object model, and the test execution script. Hence, the overall execution results are satisfactory and time-bound. Explicit wait provides the following conditions for usage:
+
+alertIsPresent()
+elementSelectionStateToBe()
+elementToBeClickable()
+elementToBeSelected()
+frameToBeAvaliableAndSwitchToIt()
+invisibilityOfTheElementLocated()
+invisibilityOfElementWithText()
+presenceOfAllElementsLocatedBy()
+presenceOfElementLocated()
+textToBePresentInElement()
+textToBePresentInElementLocated()
+textToBePresentInElementValue()
+titleIs()
+titleContains()
+visibilityOf()
+visibilityOfAllElements()
+visibilityOfAllElementsLocatedBy()
+visibilityOfElementLocated()
+
+****************************************************************************************
+
+The above conditions come under two types of explicit wait commands:
+WebDriverWait
+FluentWait
+
+********************************************************WebDriverWait*******************************************************************************
+
+WebDriverWait command in Selenium:
+WebDriverWait specifies the condition and time for which the WebDriver needs to wait. Practically, WebDriverWait and explicit wait go synonymously as their definitions and usage match perfectly. So if someone asks you to write some explicit wait scripts, it is safe to assume that the required scripts demand WebDriverWait.
+WebElement firstResult = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")));
+Here, the wait time is specified as 10 seconds by the tester by Duration.ofSeconds(10), and the condition used is elementToBeClickable. Hence, the above code summarises as - "The WebDriver will wait till a maximum of 10 seconds for the element defined by the XPath to become clickable. 
+
+
+**********************************************************Fluent Wait*******************************************************************************
+
+
+Fluent wait in Selenium:
+The fluent wait is similar to explicit wait in Selenium with one additional argument of frequency (also known as polling time). The frequency number tells the WebDriver to keep checking for the element at regular intervals and wait till the maximum of "Duration.ofSeconds". This saves execution time. If the element becomes available earlier, we can proceed with our execution and finish quickly.
+Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(30)).pollingEvery(Duration.ofSeconds(5)).ignoring(NoSuchElementException.class);
+
+In the above code, the maximum allowed time for waiting is specified as 30 seconds (Duration.ofSeconds(30)) and the polling time is 5 seconds (pollingEvery(Duration.ofSeconds(5))). With this arrangement, the WebDriver will keep checking for the element every 5 seconds to a maximum elapse of 30 seconds.
+
+In the last line of the code, notice another function "ignoring". This is a custom configuration written by the tester and is not required each time. The significance of "ignoring" is to ignore certain exceptions that can hinder the test execution process. In this code, NoSuchElementException is the ignored exception.
+
+FluentWait in Selenium is an important class when we are dealing with AJAX elements. When a user is exploring the website on a slower network, these elements may take more time to load than what they would have taken in lab testing. To play safe, FluentWait helps us mimic such scenarios and produce the best quality web application.
+
+**********************************************************************************************************************************************************
+

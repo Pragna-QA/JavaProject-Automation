@@ -1,0 +1,46 @@
+package com.learnautomation.testcases;
+
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
+
+import com.learnautomation.dataProvider.CustomDataProvider;
+import com.learnautomation.helper.BaseClass;
+import com.learnautomation.pages.CartPage;
+import com.learnautomation.pages.HomePage;
+import com.learnautomation.pages.ManageCoursesPage;
+
+public class UserActivitiesTest extends BaseClass
+{
+	
+	@Test(dataProvider = "useractivities", dataProviderClass = CustomDataProvider.class)
+	public void UserActiviesList(String uname, String pass)
+	{
+		HomePage page = new HomePage(driver);
+		page.UserActivities(uname, pass);	
+		
+		
+	}
+	
+	@Test
+	public void cartActivities()
+	{
+		CartPage cart1 = new CartPage(driver);
+		cart1.clickOnCart();
+		
+		//driver.findElement(By.xpath("//button[normalize-space()='Shop Now']")).click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Shop Now']")));
+		
+		ManageCoursesPage course = new ManageCoursesPage(driver);
+		course.shopButton();
+		
+		
+	}
+
+}
